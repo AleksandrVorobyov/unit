@@ -1,13 +1,18 @@
 .header {
   position: relative;
-  height: 870px;
+  height: 970px;
   background-color: #414a4f;
   color: #fff;
   background-image: url("../img/header/alexandru-acea.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-width: 595px) {
+    height: 870px;
+  }
 }
+
 .header::before {
   content: "";
   display: block;
@@ -18,10 +23,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.container {
-  width: 1170px;
-  margin: 0 auto;
-}
+
 .header__content {
   position: absolute;
   top: 0;
@@ -33,6 +35,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .header_logo {
   margin: 0;
   margin-bottom: 70px;
@@ -42,105 +45,148 @@
   text-transform: uppercase;
   letter-spacing: 19px;
 }
+
 .header__desc {
   max-width: 725px;
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.5;
   // letter-spacing: 2px;
   margin-bottom: 70px;
+
+  @media (min-width: 970px) {
+    font-size: 20px;
+  }
 }
+
 .header__desc p {
   margin-top: 0;
   margin-bottom: 15px;
 }
+
 .header__desc span {
   letter-spacing: 1px;
 }
+
 .header__form {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 970px) {
+    flex-direction: row;
+  }
 }
+
 .header__form input {
-  margin-right: 20px;
+  @media (min-width: 970px) {
+    margin-right: 20px;
+  }
 }
+
 .input {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  padding: 0 30px;
+  font-size: 24px;
+  padding: 25px 30px;
   color: rgb(255, 255, 255);
   font-weight: 700;
-  line-height: 2.143;
+  line-height: 1;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 30px;
   border: none;
-  width: 200px;
-  height: 60px;
   transition: background-color 0.2s ease;
+  margin-bottom: 50px;
+
   &::placeholder {
     color: #fff;
   }
+
   &:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.7);
   }
+
+  @media (min-width: 970px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 .button-submit {
-  font-size: 14px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
   color: rgb(255, 255, 255);
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 2.86;
+  line-height: 1;
 
   background-color: rgba(0, 0, 0, 0.5);
-  height: 60px;
-  padding: 0 30px;
+  padding: 25px 30px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
   letter-spacing: 3px;
   transition: background-color 0.2s ease;
+
   &:focus,
   &:hover {
-  outline: none;
-  background-color: darken(#50e3a4, 20%);
+    outline: none;
+    background-color: darken(#50e3a4, 20%);
+  }
+
+  @media (min-width: 970px) {
+    font-size: 14px;
   }
 }
+
 .header__scroll {
   position: absolute;
-  bottom: 120px;
+  bottom: 15px;
   width: 32px;
   height: 48px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: 970px) {
+    bottom: 120px;
+  }
 }
+
 .header__nav-button {
+  display: none;
   position: absolute;
   top: 60px;
-  left: 54px;
+  left: 250px;
   width: 60px;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media (min-width: 645px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 .header__top-buttons {
   position: absolute;
   top: 0;
 }
+
 .header__search-button {
   position: absolute;
+  display: none;
   top: 60px;
-  right: 54px;
+  right: 250px;
   width: 60px;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media (min-width: 645px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

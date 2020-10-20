@@ -1,11 +1,12 @@
 .sectiom-focus {
-  padding-top: 80px;
+  padding: 80px 50px 0;
   position: relative;
   overflow: hidden;
 }
+
 .sectiom-focus::after {
   position: absolute;
-  display: block;
+  display: none;
   content: "";
   width: 187px;
   height: 187px;
@@ -14,22 +15,48 @@
   right: 0;
   transform: translate(50%, -50%) rotate(45deg);
   background-color: #a4eecb;
+
+  @media (min-width: 1320px) {
+    display: block;
+  }
 }
+
 .section-functional__content {
-  width: 470px;
-  margin-left: auto;
-  padding-bottom: 163px;
+
+  margin-bottom: 100px;
+
+  @media (min-width: 500px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: 970px) {
+    width: 470px;
+    margin-left: auto;
+    padding-bottom: 163px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
+
 .sectiom-focus__row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
+
+  @media (min-width: 970px) {
+    flex-direction: row;
+  }
 }
+
 .section-functional__img-wrapper {
   position: relative;
   width: 470px;
   height: 731px;
 }
+
 .section-functional__img {
   position: absolute;
   top: 0;

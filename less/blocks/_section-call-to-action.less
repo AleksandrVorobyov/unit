@@ -1,11 +1,12 @@
 .section-call-to-action {
   background-image: url("../img/call-to-action/fon.jpg");
   background-color: #0a824e;
-  padding: 90px 0 90px;
+  padding: 90px 15px 90px;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
+
 .section-call-to-action::before {
   content: "";
   display: block;
@@ -16,24 +17,32 @@
   height: 100%;
   background-color: rgba(10, 130, 78, 0.7);
 }
+
 .call-to-action__title h3 {
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 500;
   color: rgb(255, 255, 255);
   line-height: 1.364;
   text-align: center;
   margin: 0;
   margin-bottom: 50px;
+
+  @media (min-width: 970px) {
+    font-size: 22px;
+  }
 }
+
 .call-to-action__title span {
   letter-spacing: 2px;
   font-weight: 700;
 }
+
 .call-to-action__button {
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  font-size: 14px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
   color: rgb(43, 178, 121);
   font-weight: bold;
@@ -50,9 +59,14 @@
   cursor: pointer;
   letter-spacing: 3px;
   transition: background-color 0.2s ease;
+
   &:focus,
   &:hover {
     outline: none;
     background-color: darken(#61f5b5, 10%);
+  }
+
+  @media (min-width: 970px) {
+    font-size: 14px;
   }
 }
